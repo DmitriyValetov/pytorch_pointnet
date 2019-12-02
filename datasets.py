@@ -101,6 +101,7 @@ class ShapeNetDataset(data.Dataset):
                      point_cloud_class=None,
                      segmentation_label_file=None,
                      segmentation_classes_offset=None):
+                     
         point_cloud = np.loadtxt(point_file).astype(np.float32)
         if number_of_points:
             sampling_indices = np.random.choice(point_cloud.shape[0], number_of_points)
